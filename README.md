@@ -112,6 +112,16 @@ git push -u origin minha-feature
 
 ---
 
+## 🐛 Erros Mais Comuns no Git e GitHub e Como Corrigir
+
+1. Um dos erros mais comuns é fazer commit na branch errada, como na main, sem querer. Para resolver, você pode criar uma nova branch com `git checkout -b nome-da-branch` e depois fazer `git push origin nome-da-branch`. Assim seus commits ficam na branch certa e você evita bagunçar a main.
+
+2. Outro erro bem comum é esquecer de adicionar arquivos antes do commit. Se isso acontecer, é só usar `git add nome-do-arquivo` e depois fazer `git commit -m "mensagem"`. Caso queira incluir no commit anterior, pode usar `git commit --amend` para corrigir rapidamente sem criar outro commit separado.
+
+3. 
+Por fim, errar na mensagem do commit também acontece bastante. Dá pra corrigir facilmente com `git commit --amend -m "mensagem nova"`. Se já tiver enviado pro GitHub, será necessário forçar o push com `git push origin sua-branch --force` pra atualizar o commit no repositório remoto.
+
+
 ## 🎯 Boas Práticas com Git e GitHub
 
 - ✅ Commits pequenos e frequentes
